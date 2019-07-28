@@ -1,0 +1,8 @@
+<div *ngIf="productsStorage" (window:resize)="onResize($event)" id="featured-products-container">
+    <button (click)="rotateFeatured('left')" id="featured-product-left-button" class="featured-product-button"></button>
+    <div [class.animation]="isOnTransition" class="product" *ngFor="let product of productsStorage | slice:pointingToInitial:pointingToInitial+divisions" (click)="goToProduct(product._id)">
+        <div class="featured-product-heading-box"><h4 class="featured-product-heading-text">{{product.name}}</h4></div>
+        <img class="featured-product-img" [src]="product.img">
+    </div>
+    <button (click)="rotateFeatured('right')" id="featured-product-right-button" class="featured-product-button"></button>
+</div>

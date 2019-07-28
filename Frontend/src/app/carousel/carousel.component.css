@@ -1,0 +1,95 @@
+#carousel-container{
+    background-color: #242424;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+#carousel {
+    display: block;
+    height: auto;
+    width: 75%;
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    display: block;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    cursor: pointer;
+}
+.animation{
+    animation: fadein 0.7s;
+    -moz-animation: fadein 0.7s; /* Firefox */
+    -webkit-animation: fadein 0.7s; /* Safari and Chrome */
+    -o-animation: fadein 0.7s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@media only screen and (max-width: 1400px){
+  #carousel-container{
+    height: auto;
+  }
+  #carousel{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 2000px){
+  #carousel-container{
+    height: 800px;
+  }
+
+}
+@media only screen and (min-width: 2600px){
+  #carousel-container{
+    height: 1400px;
+  }
+}
+@media only screen and (min-width: 4000px){
+  #carousel-container{
+    height: 1800px;
+  }
+}

@@ -1,0 +1,123 @@
+nav {
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #6d1aa5;
+    width: 100%;
+    color: white;
+    border-bottom:solid 2px #53157c;
+    box-sizing: border-box;
+}
+#nav-logo{
+  width: auto;
+  margin-left: 7%;
+  margin-right: auto;
+  padding:0;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+form{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+#search-box{
+    height: 65%;
+    width: 90%;
+    border: 2px solid rgb(140, 140, 140, 0.1);
+    font-size: 100%;
+    color: #111111;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(250, 250, 250);
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+#shopping-cart-icon {
+  cursor: pointer;
+}
+#shopping-cart-icon:focus, #shopping-cart-icon:hover{
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+  -ms-tap-highlight-color: rgba(0, 0, 0, 0);
+  -o-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+#search-box:focus, #search-box:hover{
+    border: 2px solid rgb(255, 255, 255);
+    transform: translate(0px, -1px);
+    background-color: #440b69;
+    color: #FFF;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+    -ms-tap-highlight-color: rgba(0, 0, 0, 0);
+    -o-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#search-box:focus::placeholder, #search-box:hover::placeholder {
+    color: rgb(240, 240, 240);
+}
+#search-button{
+    font-size: 100%;
+    margin-left: 2%;
+    height: 62.5%;
+    width: auto;
+    padding: 0 8px;
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: rgb(126, 4, 207);
+    color: #ffffff;
+    outline: none;
+    font-weight: 700;
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+    -moz-tap-highlight-color:   rgba(0, 0, 0, 0);
+    -ms-tap-highlight-color:    rgba(0, 0, 0, 0);
+    -o-tap-highlight-color:     rgba(0, 0, 0, 0);
+    transition: 0.3s;
+}
+/*Need to fix hover on mobile*/
+#search-button:hover{
+    -o-box-shadow:      0px 0px 0px 2px rgb(178, 83, 255);
+    -ms-box-shadow:     0px 0px 0px 2px rgb(178, 83, 255);
+    -moz-box-shadow:    0px 0px 0px 2px rgb(178, 83, 255);
+    -webkit-box-shadow: 0px 0px 0px 2px rgb(178, 83, 255);
+    box-shadow:         0px 0px 0px 2px rgb(178, 83, 255);
+    outline: none;
+    transform: translate(0px, -2px);
+}
+#search-button:active{
+    background-color: rgb(147, 26, 247);
+    outline: none;
+
+}
+#user-options{
+    display: flex;
+    margin-right: 2%;
+    margin-left: auto;
+}
+
+@media only screen and (max-width: 700px)  {
+  #search-button{
+    display: none;
+  }
+}

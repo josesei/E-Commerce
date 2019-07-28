@@ -1,0 +1,12 @@
+<nav>
+  <a id="nav-logo" [routerLink]='["/"]'>GH</a>
+  <form class="form-group" (ngSubmit)="search(value)">
+      <input class="form-control" required name="search-form" type="text" [(ngModel)]="value" placeholder="Busco..." id="search-box" autocomplete="off" spellcheck="false">
+      <button type="submit" id="search-button" >
+          Buscar
+      </button>
+  </form>
+  <div id="user-options">
+      <div><p id="shopping-cart-icon" [routerLink]='["/cart"]'>Carrito(img)</p></div><div><p>Login</p></div>
+  </div>
+</nav>
