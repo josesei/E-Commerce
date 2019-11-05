@@ -25,12 +25,11 @@ export class ProductPageComponent implements OnInit {
       _id: "",
       name: "",
       category: "",
-      description: "",
+      desc: "",
       stock: 0,
       price: 0,
       weight: 0,
       img: "",
-      imgDetail: "",
       quantityToBuy: 1
     };
 
@@ -47,8 +46,7 @@ export class ProductPageComponent implements OnInit {
   }
 
   changeQuantity(quantity){
-    console.log(quantity);
-    this.product.quantityToBuy = quantity;
+    this.product.quantityToBuy = parseInt(quantity);
   }
 
   getProductByID(id) {

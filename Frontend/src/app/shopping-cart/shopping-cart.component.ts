@@ -16,8 +16,7 @@ export class ShoppingCartComponent implements OnInit {
   dummyProduct: Product;
   //
   constructor(private shoppingCartService: ShoppingCartService) {
-    this.shoppingCartProducts = this.shoppingCartService.getShoppingCartProducts();
-    this.emptyCart = this.shoppingCartProducts.length === 0;
+    this.emptyCart = this.shoppingCartService.getShoppingCartProducts().length === 0;
    }
 
   ngOnInit() {
@@ -27,16 +26,12 @@ export class ShoppingCartComponent implements OnInit {
 
   checkOut(shoppingCartProducts) {
   }
+
   removeProductFromShoppingCart(productID) {
     this.shoppingCartService.removeProductFromShoppingCart(productID);
-    this.updateChanges();
   }
   changeQuantity(quantityNumber, productID) {
     this.shoppingCartService.changeQuantity(quantityNumber, productID);
-    this.updateChanges();
-  }
-  updateChanges() {
-    this.shoppingCartProducts = this.shoppingCartService.getShoppingCartProducts();
   }
 
 }

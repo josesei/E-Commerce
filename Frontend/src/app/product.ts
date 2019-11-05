@@ -1,12 +1,11 @@
 export class Product {
-    _id: string;
-    name: string;
-    category: string;
-    description: string;
-    price: number;
-    stock: number;
-    weight: number;
-    img: string;
-    imgDetail: string;
-    quantityToBuy: number;
+    _id: String;
+    name: String;
+    category: String;
+    desc: String;
+    price: Number;
+    stock: Number;
+    weight: Number;
+    img: String;
+    quantityToBuy: Number;
 }

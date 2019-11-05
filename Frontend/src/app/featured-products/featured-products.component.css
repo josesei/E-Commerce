@@ -144,11 +144,11 @@
     transform: none;
   }
   #featured-product-right-button:hover{
-    transform: none;
+    transform: rotate(180deg);
   }
 
   #featured-product-left-button:hover{
-    transform: rotate(180deg);
+    transform: none;
   }
 }
 

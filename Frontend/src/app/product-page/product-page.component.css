@@ -36,8 +36,8 @@ h1{
   display: block;
   height: 275px;
   width: 275px;
-  margin-left: 45px;
-  margin-top: 45px;
+  margin-left: 125px;
+  margin-top: 65px;
 }
 
 #product-image {
@@ -56,7 +56,7 @@ h1{
 
 #product-label {
   margin-left: 45px;
-  margin-top: 60px
+  margin-top: 65px
 }
 
 #price-label {
@@ -128,12 +128,16 @@ h1{
   outline: none;
 }
 
-#product-description{
+#product-desc{
   margin-top: 60px;
   margin-bottom: 60px;
   font-size: 14px;
-  width: 90%;
-  margin-left: 45px;
+  font-weight: 300;
+  font-family: sans-serif serif;
+  width: 82%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
 }
 
 
@@ -142,17 +146,26 @@ h1{
   #product-options{
     width: 900px;
   }
+  #img-container{
+    margin-left:105px;
+  }
 }
 
 @media only screen and (max-width: 1600px){
   #product-options{
     width: 800px;
   }
+  #img-container{
+    margin-left:95px;
+  }
 }
 
 @media only screen and (max-width: 1500px){
   #product-options{
     width: 700px;
+  }
+  #img-container{
+    margin-left:85px;
   }
 }
 
@@ -167,10 +180,16 @@ h1{
   #product-options{
     width: 600px;
   }
+  #img-container{
+    margin-left:75px;
+  }
 }
 @media only screen and (max-width: 1200px){
   #product-options{
     width: 500px;
+  }
+  #img-container{
+    margin-left:65px;
   }
 }
 @media only screen and (max-width: 1100px){

@@ -20,10 +20,12 @@ const ProductSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     name: String,
     category: String,
-    description: String,
+    desc: String,
     price: Number,
+    stock: Number,
     weight: Number,
-    img: String
+    img: String,
+    quantityToBuy: Number
 },
 {
     collection: 'Products'

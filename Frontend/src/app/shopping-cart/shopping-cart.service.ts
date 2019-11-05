@@ -13,8 +13,23 @@ export class ShoppingCartService {
 
    }
 
-  addToShoppingCart(product) {
-    this.shoppingCartProducts.push(product);
+  addToShoppingCart(product:Product) {
+    let i = 0;
+    let found = false;
+
+    while ( (i < this.shoppingCartProducts.length) && (!found) ) {
+      if ( this.shoppingCartProducts[i]._id === product._id ) {
+        if(this.shoppingCartProducts[i].quantityToBuy + product.quantityToBuy<=9){
+          this.shoppingCartProducts[i].quantityToBuy = this.shoppingCartProducts[i].quantityToBuy + product.quantityToBuy; 
+        }
+        found= true;
+      } 
+      i++;
+    }
+    if(!found){
+      this.shoppingCartProducts.push(product);
+    }
+    
   }
   getShoppingCartProducts() {
     return this.shoppingCartProducts;
@@ -23,7 +38,7 @@ export class ShoppingCartService {
     if ( this.shoppingCartProducts.length !== 0) {
       this.shoppingCartProducts.forEach(product => {
         if ( productID === product._id) {
-          product.quantityToBuy = quantityNumber;
+          product.quantityToBuy = parseInt(quantityNumber);
         }
       });
     }
@@ -31,12 +46,13 @@ export class ShoppingCartService {
   removeProductFromShoppingCart(productID){
     let i = 0;
     let productRemoved = false;
-    while ( i <= this.shoppingCartProducts.length && !productRemoved ) {
-      if ( this.shoppingCartProducts[i]._id === productID ) {
-        this.shoppingCartProducts.splice(i, 1);
-        productRemoved = true;
-      } else {
-        i++;
+    if(this.shoppingCartProducts.length!==0){
+      while ( i < this.shoppingCartProducts.length && !productRemoved ) {
+        if ( this.shoppingCartProducts[i]._id === productID ) {
+          this.shoppingCartProducts.splice(i, 1);
+          productRemoved = true;
+        }
+        i++; 
       }
     }
   }
