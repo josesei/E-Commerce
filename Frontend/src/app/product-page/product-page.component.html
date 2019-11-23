@@ -10,7 +10,7 @@
             <h1>{{product.name}}</h1>
         </div>
         <div id="price-label">
-          <p>ARS $ {{product.price}}</p>
+          <p>ARS {{product.price.toFixed(2)|currency }}</p>
         </div>
         <div id="stock-label">
             <p>Stock: {{product.stock}} unidades</p>

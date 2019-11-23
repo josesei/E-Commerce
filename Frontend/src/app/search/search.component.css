@@ -20,20 +20,47 @@
   border: 2px solid rgb(230, 230, 230);
   padding-top: 20px;
   padding-bottom: 20px;
-  font-size: 16px;
+  font-size: 18px;
 }
 .search-product{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   width: 100%;
-  height: 80px;
+  height: 140px;
   border-bottom: 1px solid #DDD;
-  border-top: 1px solid #DDD;
-  color: #8B1EAC;
+  color: rgb(0, 0, 0);
+}
+.search-product-img{
+  height: 95%;
+  width: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
 }
 .search-product-img-container{
   display: block;
   height: 100%;
-  width: 25%;
+}
+.search-product-info-container{
+  display: block;
+  height: 85%;
+  padding-top: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.search-product-name{
+  font-size: 16px;
+  font-weight: 300;
+  color: #575757;
+  font-family: sans-serif, serif;
+  cursor: pointer;
+}
+.search-product-price{
+  font-weight: 500;
+  padding-top: 5px;
+  font-size: 20px;
+}
+.noBottomBorder{
+  border-bottom: none;
 }

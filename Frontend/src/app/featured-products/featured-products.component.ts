@@ -17,7 +17,7 @@ export class FeaturedProductsComponent implements OnInit {
   isOnTransition: boolean;
   transition: any;
 
-  productsStorage: Array<Product>;
+  productsStorage: Product[];
   pointingToInitial: number;
 
   constructor(private http: HttpClient, private router: Router) {
@@ -80,7 +80,7 @@ export class FeaturedProductsComponent implements OnInit {
   getFeaturedProducts() {
   this.http.get(this.featuredProductsUrl)
     .subscribe(
-      (data: Array<Product> ) => this.productsStorage = data);
+      (data: Product[] ) => this.productsStorage = data);
   }
 
 

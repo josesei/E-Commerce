@@ -1,21 +1,19 @@
 <app-nav></app-nav>
-<!-- CAMBIAR
+
 <div id="search-results-background">
   <div id="search-results-container">
       <p *ngIf="noResults;else searchProductsTemplate" id="no-results-label" >No hay productos en su carrito</p>
       <ng-template #searchProductsTemplate>
-        <div *ngFor="let product of searchProducts" class="search-product">
+        <div *ngFor="let product of searchProducts; last as isLast" class="search-product" [ngClass]="{'noBottomBorder':isLast}">
             <div class="search-product-img-container">
-                <img src="{{product.img}}" class="search-product-img">
+                <img src="{{product.img}}" class="search-product-img" (click)="goToProduct(product._id)">
             </div>
-            <div class="shopping-cart-product-name-container">
-              <p class="shopping-cart-product-name">Nombre</p>
-            </div>
-            <div class="shopping-cart-product-price-container">
-              <p class="shopping-cart-product-price">$ {{product.price}} </p>
+            <div class="search-product-info-container">
+              <p class="search-product-name" (click)="goToProduct(product._id)">{{product.name}}</p>
+              <p class="search-product-price">{{product.price.toFixed(2)|currency}} </p>
             </div>
           </div>
       </ng-template>
   </div>
 </div>
--->
+
