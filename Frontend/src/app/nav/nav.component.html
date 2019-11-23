@@ -3,10 +3,11 @@
   <form class="form-group" (ngSubmit)="search(value)">
       <input class="form-control" required name="search-form" type="text" [(ngModel)]="value" placeholder="Busco..." id="search-box" autocomplete="off" spellcheck="false">
       <button type="submit" id="search-button" >
-          Buscar
+        <i id="filtersubmit" class="fa fa-search"></i>
       </button>
   </form>
   <div id="user-options">
-      <div><p id="shopping-cart-icon" [routerLink]='["/cart"]'>Carrito(img)</p></div><div><p>Login</p></div>
+      <i id="user-icon" class="fas fa-user"></i>
+      <i class="fas fa-shopping-cart" id="shopping-cart-icon" [routerLink]='["/cart"]'></i>
   </div>
 </nav>

@@ -5,10 +5,10 @@ nav {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    background-color: #6d1aa5;
+    background-color: #111111;
     width: 100%;
     color: white;
-    border-bottom:solid 2px #53157c;
+    border-bottom:solid 4px #53157c;
     box-sizing: border-box;
 }
 #nav-logo{
@@ -38,7 +38,7 @@ form{
     font-size: 100%;
     color: #111111;
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 0;
     background-color: rgb(250, 250, 250);
     transition: all 0.30s ease-in-out;
     -webkit-transition: all 0.30s ease-in-out;
@@ -61,32 +61,16 @@ form{
   -o-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-
-#search-box:focus, #search-box:hover{
-    border: 2px solid rgb(255, 255, 255);
-    transform: translate(0px, -1px);
-    background-color: #440b69;
-    color: #FFF;
-    outline: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
-    -ms-tap-highlight-color: rgba(0, 0, 0, 0);
-    -o-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-#search-box:focus::placeholder, #search-box:hover::placeholder {
-    color: rgb(240, 240, 240);
-}
 #search-button{
     font-size: 100%;
-    margin-left: 2%;
+    margin-left: -65px;
     height: 62.5%;
-    width: auto;
+    width: 50px;
     padding: 0 8px;
-    border: 2px solid #ffffff;
-    border-radius: 12px;
+    border: none;
     cursor: pointer;
-    background-color: rgb(126, 4, 207);
-    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0);
+    color: #000000;
     outline: none;
     font-weight: 700;
     -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
@@ -97,16 +81,10 @@ form{
 }
 /*Need to fix hover on mobile*/
 #search-button:hover{
-    -o-box-shadow:      0px 0px 0px 2px rgb(178, 83, 255);
-    -ms-box-shadow:     0px 0px 0px 2px rgb(178, 83, 255);
-    -moz-box-shadow:    0px 0px 0px 2px rgb(178, 83, 255);
-    -webkit-box-shadow: 0px 0px 0px 2px rgb(178, 83, 255);
-    box-shadow:         0px 0px 0px 2px rgb(178, 83, 255);
     outline: none;
-    transform: translate(0px, -2px);
 }
 #search-button:active{
-    background-color: rgb(147, 26, 247);
+    background-color: rgb(209, 209, 209);
     outline: none;
 
 }
@@ -114,6 +92,10 @@ form{
     display: flex;
     margin-right: 2%;
     margin-left: auto;
+}
+
+#user-icon{
+  margin-right: 20px;
 }
 
 @media only screen and (max-width: 700px)  {
