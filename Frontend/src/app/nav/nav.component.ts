@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { RouterModule } from '@angular/router'; 
 
 
 
@@ -10,16 +11,20 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class NavComponent implements OnInit {
 
-  searchValue: String;
+  value: String;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.searchValue = this.activatedRoute.snapshot.queryParamMap.get('searchValue');
+    this.value = this.activatedRoute.snapshot.queryParamMap.get('searchValue');
+  }
+
+  goHomePage(){
+    this.router.navigate(['/']);
   }
 
   search(value){
-    this.router.navigate(['/search'], {queryParams: { 'searchValue' : value, 'pageValue':1 }});
+    this.router.navigate(['/search'], {queryParams: { 'searchValue' : value, 'pageValue': 1 }});
   }
 
 }

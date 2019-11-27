@@ -2,7 +2,7 @@
 <div id="shopping-cart-background">
   <form class="form-group" (ngSubmit)="checkOut(shoppingCartProducts)">
     <div id="shopping-cart-products-container">
-      <p *ngIf="emptyCart;else shoppingCartProductsTemplate" id="empty-cart-label" >No hay productos en su carrito</p>
+      <p *ngIf="shoppingCartProducts.length===0;else shoppingCartProductsTemplate" id="empty-cart-label" >No hay productos en su carrito</p>
       <ng-template #shoppingCartProductsTemplate>
         <div *ngFor="let product of shoppingCartService.getShoppingCartProducts()" class="shopping-cart-product">
           <div class="shopping-cart-product-img-container">
@@ -29,6 +29,6 @@
         </div>
       </ng-template>
     </div>
-    <button *ngIf="!emptyCart" type="submit" id="buy-button">Comprar</button>
+    <button *ngIf="shoppingCartProducts.length>0" type="submit" id="buy-button">Comprar</button>
   </form>
 </div>

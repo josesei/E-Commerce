@@ -25,6 +25,8 @@ export class ProductPageComponent implements OnInit {
       _id: "",
       name: "",
       category: "",
+      brand: "",
+      model: "",
       desc: "",
       stock: 0,
       price: 0,

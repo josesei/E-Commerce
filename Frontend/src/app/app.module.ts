@@ -39,7 +39,7 @@ import { LoginComponent } from './login/login.component';
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      {path: '', component: MainComponent},
+      {path: '', component: MainComponent },
       {path: 'search', component: SearchComponent },
       {path: 'login', component: LoginComponent},
       {path: 'register', component: RegisterComponent},

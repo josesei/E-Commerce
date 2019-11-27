@@ -1,17 +1,20 @@
 {
-  "name": "backend",
+  "name": "Backend",
   "version": "1.0.0",
-  "description": "Backend Server for GamingHard",
+  "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
+  "keywords": [],
   "author": "Jose Ignacio Carbone",
-  "license": "UNLICENSED",
+  "license": "No license - private",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "@types/express": "^4.17.2",
+    "@types/mongoose": "^5.5.32",
     "express": "^4.17.1",
-    "mongoose": "^5.6.4"
-  },
-  "devDependencies": {}
+    "mongoosastic": "^4.5.1",
+    "mongoose": "^5.7.12"
+  }
 }

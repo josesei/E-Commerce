@@ -10,18 +10,17 @@ import { Product } from '../product';
 })
 export class ShoppingCartComponent implements OnInit {
 
-  emptyCart = true;
-  shoppingCartProducts: Array<Product>;
+
+  shoppingCartProducts: Product[];
   //Dummy product
   dummyProduct: Product;
   //
   constructor(private shoppingCartService: ShoppingCartService) {
-    this.emptyCart = this.shoppingCartService.getShoppingCartProducts().length === 0;
+    
    }
 
   ngOnInit() {
-//Test: delete this
-//EndTest
+    this.shoppingCartProducts = this.shoppingCartService.getShoppingCartProducts();
   }
 
   checkOut(shoppingCartProducts) {

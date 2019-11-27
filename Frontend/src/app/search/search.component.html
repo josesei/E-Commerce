@@ -2,7 +2,7 @@
 
 <div id="search-results-background">
   <div id="search-results-container">
-      <p *ngIf="noResults;else searchProductsTemplate" id="no-results-label" >No hay productos en su carrito</p>
+      <p *ngIf="searchProducts.length===0;else searchProductsTemplate" id="no-results-label" >No hay resultados que coincidan con tu búsqueda</p>
       <ng-template #searchProductsTemplate>
         <div *ngFor="let product of searchProducts; last as isLast" class="search-product" [ngClass]="{'noBottomBorder':isLast}">
             <div class="search-product-img-container">

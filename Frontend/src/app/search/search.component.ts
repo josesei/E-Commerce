@@ -12,7 +12,8 @@ export class SearchComponent implements OnInit {
   
   searchValue: String;
   pageValue: Number;
-  searchProducts: Product[];
+  searchProducts: any[];
+
   searchURL="http://localhost:3000/search/";
 
   
@@ -29,9 +30,9 @@ export class SearchComponent implements OnInit {
   }
 
   getProductsPage(searchValue:String, page:Number) {
-    this.http.get(this.searchURL + searchValue)
+    this.http.get(this.searchURL + searchValue + "/" + page.toString)
       .subscribe(
-        (data: Product[] ) => this.searchProducts = data);
+        (data: any ) => this.searchProducts = data);
 
   }
 
