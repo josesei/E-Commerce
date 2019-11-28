@@ -1,6 +1,6 @@
-import { Component, OnInit} from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { RouterModule } from '@angular/router'; 
+import { Component, OnInit, Input } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -11,20 +11,21 @@ import { RouterModule } from '@angular/router';
 })
 export class NavComponent implements OnInit {
 
-  value: String;
+  searchValue: String;
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.value = this.activatedRoute.snapshot.queryParamMap.get('searchValue');
+    this.searchValue = this.route.snapshot.queryParamMap.get("searchValue");
+    console.log(this.searchValue);
   }
 
   goHomePage(){
     this.router.navigate(['/']);
   }
 
-  search(value){
-    this.router.navigate(['/search'], {queryParams: { 'searchValue' : value, 'pageValue': 1 }});
+  search(){
+    this.router.navigate(['/search'], {queryParams: { 'searchValue' : this.searchValue , 'pageValue': "1" }});
   }
 
 }
